@@ -5,13 +5,11 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C9E1852B"
-    tools:context=".MainActivity">
+    tools:context=".ViewActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_restaurant"
+    <WebView
+        android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp" />
+        android:layout_height="match_parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

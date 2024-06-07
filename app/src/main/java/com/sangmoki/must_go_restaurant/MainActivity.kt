@@ -1,6 +1,8 @@
 package com.sangmoki.must_go_restaurant
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -58,6 +60,14 @@ class MainActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.rv_restaurant)
         val rvAdapter = RvAdapter(baseContext, items)
         recyclerView.adapter = rvAdapter
+
+        rvAdapter.itemClick = object: RvAdapter.ItemClick {
+            override fun onClick(view: View, position: Int) {
+                val intent = Intent(baseContext, ViewActivity::class.java)
+                intent.putExtra("url", items[position].url)
+                startActivity(intent)
+            }
+        }
 
         // 레이아웃 구성  =  LinearLayoutManager(this) -> GridLayoutManager(this, 2)
         recyclerView.layoutManager = GridLayoutManager(this, 2)

@@ -18,7 +18,23 @@ class RvAdapter(val context : Context, val List : MutableList<DataModel>) : Recy
         return ViewHolder(v)
     }
 
+    // item 클릭 이벤트 정의
+    interface ItemClick
+    {
+        fun onClick(view: View, position: Int)
+    }
+
+    var itemClick : ItemClick? = null
+
     override fun onBindViewHolder(holder: RvAdapter.ViewHolder, position: Int) {
+
+        // 클릭 이벤트 발생 시 item 정보를 넘겨준다.
+        if (itemClick != null) {
+
+            holder.itemView.setOnClickListener { v ->
+                itemClick!!.onClick(v, position)
+            }
+        }
         holder.bindItems(List[position])
     }
 
