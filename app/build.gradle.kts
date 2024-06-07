@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -37,8 +38,13 @@ android {
 
 dependencies {
 
-    // 글라이드 라이브러리
+    // glide 라이브러리
     implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    // firebase 라이브러리
+    implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth-ktx")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

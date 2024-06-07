@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.sangmoki.must_go_restaurant" />
+                  <option name="mobileSdkAppId" value="1:600319169605:android:83ebd41ab0349e678cff2c" />
+                  <option name="projectId" value="must-go-restaurant" />
+                  <option name="projectNumber" value="600319169605" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
