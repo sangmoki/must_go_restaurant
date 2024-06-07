@@ -39,7 +39,7 @@ class RvAdapter(val context : Context, val List : MutableList<DataModel>) : Recy
 
             // 글라이드 라이브러리를 사용하여 이미지 로드
             Glide.with(context)
-                .load("https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230725_245%2F1690279577119GgE7p_JPEG%2F20230725_190024.jpg")
+                .load(item.titleImageUrl)
                 .into(rv_img)
         }
     }
