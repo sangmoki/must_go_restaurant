@@ -5,6 +5,7 @@
     android:orientation="vertical">
 
     <ImageView
+        android:id="@+id/rv_imageArea"
         android:src="@drawable/ic_launcher_foreground"
         android:background="@drawable/radius"
         android:layout_marginTop="10dp"
@@ -12,6 +13,7 @@
         android:layout_height="100dp" />
 
     <TextView
+        android:id="@+id/rv_textArea"
         android:text="text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
