@@ -44,7 +44,10 @@ dependencies {
     // firebase 라이브러리
     implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
     implementation("com.google.firebase:firebase-analytics")
+    // firebase 인증
     implementation("com.google.firebase:firebase-auth-ktx")
+    // firebase 데이터베이스
+    implementation("com.google.firebase:firebase-database-ktx")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
