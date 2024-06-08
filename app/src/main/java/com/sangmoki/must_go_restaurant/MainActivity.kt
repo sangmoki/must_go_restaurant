@@ -2,7 +2,10 @@ package com.sangmoki.must_go_restaurant
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -23,34 +26,43 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        // 북마크 객체 생성
+        val bookmarkBtn = findViewById<TextView>(R.id.bookmarkBtn)
+
+        // 북마크 TextView 클릭 이벤트
+        bookmarkBtn.setOnClickListener {
+            val intent = Intent(this, BookmarkActivity::class.java)
+            startActivity(intent)
+        }
+
         // 데이터 추가
         items.add(
             DataModel(
-                url = "https://map.naver.com/p/search/%EB%B6%88%EC%AD%88%EA%BE%B8%EB%AF%B8/place/35749600?placePath=%3Fentry%3Dpll%26from%3Dnx%26fromNxList%3Dtrue&placeSearchOption=entry%3Dpll%26fromNxList%3Dtrue&searchType=place",
-                titleImageUrl = "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230725_245%2F1690279577119GgE7p_JPEG%2F20230725_190024.jpg",
+                url = "https://www.siksinhot.com/P/753148",
+                titleImageUrl = "https://img.siksinhot.com/place/1525354730637037.jpg?w=307&h=300&c=Y",
                 titleText = "불광동 불쭈꾸미"
             )
         )
 
         items.add(
             DataModel(
-                url = "https://map.naver.com/p/search/%EC%97%B0%EC%8B%A0%EB%82%B4%20%EC%B9%98%ED%82%A8/place/410278544?placePath=?entry=pll&from=nx&fromNxList=true&searchType=place&c=15.00,0,0,0,dh",
-                titleImageUrl = "https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDA1MjFfMTE0%2FMDAxNzE2MjYzOTE4NTY3.RDSga6W41ZfymCUml2fuPAzRdmq6NfjMXEhIslGFUz4g.dSnKqL9bOcfJqPeSbuSRqmQQPdoL9ImeqNMxH55nGMEg.JPEG%2F20240520_165041.heic.jpg%3Ftype%3Dw1500_60_sharpen",
+                url = "https://www.siksinhot.com/P/614433",
+                titleImageUrl = "https://img.siksinhot.com/place/1525366504322092.jpg?w=307&h=300&c=Y",
                 titleText = "연신내 아웃닭"
             )
         )
 
         items.add(
             DataModel(
-                url = "https://map.naver.com/p/search/%EB%B6%88%EC%AD%88%EA%BE%B8%EB%AF%B8/place/35749600?placePath=%3Fentry%3Dpll%26from%3Dnx%26fromNxList%3Dtrue&placeSearchOption=entry%3Dpll%26fromNxList%3Dtrue&searchType=place\",",
-                titleImageUrl = "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240328_299%2F1711613859780dqeqy_JPEG%2FIMG_0655.JPEG",
-                titleText = "연신내 단토리"
+                url = "https://www.siksinhot.com/P/691326",
+                titleImageUrl = "https://img.siksinhot.com/place/1525325380754005.jpg?w=307&h=300&c=Y",
+                titleText = "연신내 공화춘"
             )
         )
 
         items.add(
             DataModel(
-                url = "https://map.naver.com/p/search/%EC%97%B0%EC%8B%A0%EB%82%B4%20%EB%B3%B4%EB%93%A4%EC%9D%B4%EC%A1%B1%EB%B0%9C/place/19878328?c=15.00,0,0,0,dh&isCorrectAnswer=true",
+                url = "https://www.siksinhot.com/P/371591",
                 titleImageUrl = "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231229_224%2F1703847235687M1Mia_JPEG%2F1.jpeg",
                 titleText = "연신내 보들이족발"
             )

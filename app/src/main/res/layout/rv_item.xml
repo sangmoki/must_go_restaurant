@@ -2,19 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    android:layout_marginTop="20dp"
     android:background="@drawable/radius"
     android:orientation="vertical">
+    
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+
+    </androidx.cardview.widget.CardView>
+
 
     <ImageView
         android:id="@+id/rv_imageArea"
-        android:src="@drawable/ic_launcher_foreground"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
         android:layout_width="match_parent"
+        android:layout_height="120dp"
         android:scaleType="fitXY"
-        android:layout_height="120dp" />
+        android:src="@drawable/ic_launcher_foreground" />
 
     <TextView
         android:id="@+id/rv_textArea"
@@ -25,4 +32,5 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_gravity="center" />
+
 </LinearLayout>
